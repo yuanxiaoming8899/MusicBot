@@ -1,60 +1,81 @@
-<img align="right" src="https://i.imgur.com/zrE80HY.png" height="200" width="200">
-
-# JMusicBot
-
-[![Downloads](https://img.shields.io/github/downloads/jagrosh/MusicBot/total.svg)](https://github.com/jagrosh/MusicBot/releases/latest)
-[![Stars](https://img.shields.io/github/stars/jagrosh/MusicBot.svg)](https://github.com/jagrosh/MusicBot/stargazers)
-[![Release](https://img.shields.io/github/release/jagrosh/MusicBot.svg)](https://github.com/jagrosh/MusicBot/releases/latest)
-[![License](https://img.shields.io/github/license/jagrosh/MusicBot.svg)](https://github.com/jagrosh/MusicBot/blob/master/LICENSE)
-[![Discord](https://discordapp.com/api/guilds/147698382092238848/widget.png)](https://discord.gg/0p9LSGoRLu6Pet0k)<br>
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/jagrosh/MusicBot/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/jagrosh/MusicBot/tree/master)
-[![Build and Test](https://github.com/jagrosh/MusicBot/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/jagrosh/MusicBot/actions/workflows/build-and-test.yml)
-[![CodeFactor](https://www.codefactor.io/repository/github/jagrosh/musicbot/badge)](https://www.codefactor.io/repository/github/jagrosh/musicbot)
-
-A cross-platform Discord music bot with a clean interface, and that is easy to set up and run yourself!
-
-[![Setup](http://i.imgur.com/VvXYp5j.png)](https://jmusicbot.com/setup)
-
-## Features
-  * Easy to run (just make sure Java is installed, and run!)
-  * Fast loading of songs
-  * No external keys needed (besides a Discord Bot token)
-  * Smooth playback
-  * Server-specific setup for the "DJ" role that can moderate the music
-  * Clean and beautiful menus
-  * Supports many sites, including Youtube, Soundcloud, and more
-  * Supports many online radio/streams
-  * Supports local files
-  * Playlist support (both web/youtube, and local)
-
-## Supported sources and formats
-JMusicBot supports all sources and formats supported by [lavaplayer](https://github.com/sedmelluq/lavaplayer#supported-formats):
-### Sources
-  * YouTube
-  * SoundCloud
-  * Bandcamp
-  * Vimeo
-  * Twitch streams
-  * Local files
-  * HTTP URLs
-### Formats
-  * MP3
-  * FLAC
-  * WAV
-  * Matroska/WebM (AAC, Opus or Vorbis codecs)
-  * MP4/M4A (AAC codec)
-  * OGG streams (Opus, Vorbis and FLAC codecs)
-  * AAC streams
-  * Stream playlists (M3U and PLS)
-
-## Example
-![Loading Example...](https://i.imgur.com/kVtTKvS.gif)
-
-## Setup
-Please see the [Setup Page](https://jmusicbot.com/setup) to run this bot yourself!
-
-## Questions/Suggestions/Bug Reports
-**Please read the [Issues List](https://github.com/jagrosh/MusicBot/issues) before suggesting a feature**. If you have a question, need troubleshooting help, or want to brainstorm a new feature, please start a [Discussion](https://github.com/jagrosh/MusicBot/discussions). If you'd like to suggest a feature or report a reproducible bug, please open an [Issue](https://github.com/jagrosh/MusicBot/issues) on this repository. If you like this bot, be sure to add a star to the libraries that make this possible: [**JDA**](https://github.com/DV8FromTheWorld/JDA) and [**lavaplayer**](https://github.com/sedmelluq/lavaplayer)!
-
-## Editing
-This bot (and the source code here) might not be easy to edit for inexperienced programmers. The main purpose of having the source public is to show the capabilities of the libraries, to allow others to understand how the bot works, and to allow those knowledgeable about java, JDA, and Discord bot development to contribute. There are many requirements and dependencies required to edit and compile it, and there will not be support provided for people looking to make changes on their own. Instead, consider making a feature request (see the above section). If you choose to make edits, please do so in accordance with the Apache 2.0 License.
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/18772f08f73f04b945f3e9ed811e078ba7833743485a5b3c36a6560ff81a9f1a/68747470733a2f2f692e696d6775722e636f6d2f7a7245383048592e706e67"><img align="right" src="https://camo.githubusercontent.com/18772f08f73f04b945f3e9ed811e078ba7833743485a5b3c36a6560ff81a9f1a/68747470733a2f2f692e696d6775722e636f6d2f7a7245383048592e706e67" height="200" width="200" data-canonical-src="https://i.imgur.com/zrE80HY.png" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JMusicBot</font></font></h1><a id="user-content-jmusicbot" class="anchor" aria-label="永久链接：JMusicBot" href="#jmusicbot"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://github.com/jagrosh/MusicBot/releases/latest"><img src="https://camo.githubusercontent.com/ebd73d0b3f2137c00f4379e4201f734b95a9d68b92a6024e66ee7ecbc7d5dbf1/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f6a6167726f73682f4d75736963426f742f746f74616c2e737667" alt="下载" data-canonical-src="https://img.shields.io/github/downloads/jagrosh/MusicBot/total.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/jagrosh/MusicBot/stargazers"><img src="https://camo.githubusercontent.com/0cc7b16fd29d3c80f0035073cf4cca231cebfea7e614457e1cd11dbfa994e006/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f6a6167726f73682f4d75736963426f742e737667" alt="明星" data-canonical-src="https://img.shields.io/github/stars/jagrosh/MusicBot.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/jagrosh/MusicBot/releases/latest"><img src="https://camo.githubusercontent.com/3f644f920667c6abbe834884aa12a181f35bd1fa5788493a2bf8045d9d912cf4/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652f6a6167726f73682f4d75736963426f742e737667" alt="发布" data-canonical-src="https://img.shields.io/github/release/jagrosh/MusicBot.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/jagrosh/MusicBot/blob/master/LICENSE"><img src="https://camo.githubusercontent.com/d61846def84da772d95842513c814502f342a506f66e7facd426b12de75685e9/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f6a6167726f73682f4d75736963426f742e737667" alt="执照" data-canonical-src="https://img.shields.io/github/license/jagrosh/MusicBot.svg" style="max-width: 100%;"></a>
+<a href="https://discord.gg/0p9LSGoRLu6Pet0k" rel="nofollow"><img src="https://camo.githubusercontent.com/6071a20d7322c4f5218bfb4babfd3fe01c67b464b7ce8351bfd1216ca0c132ce/68747470733a2f2f646973636f72646170702e636f6d2f6170692f6775696c64732f3134373639383338323039323233383834382f7769646765742e706e67" alt="不和谐" data-canonical-src="https://discordapp.com/api/guilds/147698382092238848/widget.png" style="max-width: 100%;"></a><br>
+<a href="https://dl.circleci.com/status-badge/redirect/gh/jagrosh/MusicBot/tree/master" rel="nofollow"><img src="https://camo.githubusercontent.com/9e3b03a6cdf2c1339dc7ecebadae2642ef519067ae567b76f765233a1aa0ab6f/68747470733a2f2f646c2e636972636c6563692e636f6d2f7374617475732d62616467652f696d672f67682f6a6167726f73682f4d75736963426f742f747265652f6d61737465722e7376673f7374796c653d737667" alt="圆环" data-canonical-src="https://dl.circleci.com/status-badge/img/gh/jagrosh/MusicBot/tree/master.svg?style=svg" style="max-width: 100%;"></a>
+<a href="https://github.com/jagrosh/MusicBot/actions/workflows/build-and-test.yml"><img src="https://github.com/jagrosh/MusicBot/actions/workflows/build-and-test.yml/badge.svg" alt="构建和测试" style="max-width: 100%;"></a>
+<a href="https://www.codefactor.io/repository/github/jagrosh/musicbot" rel="nofollow"><img src="https://camo.githubusercontent.com/9421d884b0ac0e00add88d6374917206a201ce7853dc0e3140728ee9c4c3db73/68747470733a2f2f7777772e636f6465666163746f722e696f2f7265706f7369746f72792f6769746875622f6a6167726f73682f6d75736963626f742f6261646765" alt="编码因子" data-canonical-src="https://www.codefactor.io/repository/github/jagrosh/musicbot/badge" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跨平台的 Discord 音乐机器人，界面简洁，易于自行设置和运行！</font></font></p>
+<p dir="auto"><a href="https://jmusicbot.com/setup" rel="nofollow"><img src="https://camo.githubusercontent.com/6ecb783d69e3d9de838d95e5f1f9eee5a6c4fa0a43ce1a7e42d9d327502410aa/687474703a2f2f692e696d6775722e636f6d2f5676585970356a2e706e67" alt="设置" data-canonical-src="http://i.imgur.com/VvXYp5j.png" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">特征</font></font></h2><a id="user-content-features" class="anchor" aria-label="固定链接：功能" href="#features"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">易于运行（只需确保安装了 Java，然后运行！）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">歌曲加载速度快</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不需要外部密钥（Discord Bot 令牌除外）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">流畅播放</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">针对“DJ”角色的服务器特定设置，可以调节音乐</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">干净漂亮的菜单</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持许多网站，包括 Youtube、Soundcloud 等</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持多种在线广播/流媒体</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持本地文件</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">播放列表支持（网络/YouTube 和本地）</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持的来源和格式</font></font></h2><a id="user-content-supported-sources-and-formats" class="anchor" aria-label="永久链接：支持的来源和格式" href="#supported-sources-and-formats"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JMusicBot 支持</font></font><a href="https://github.com/sedmelluq/lavaplayer#supported-formats"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">lavaplayer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持的所有源和格式：</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">来源</font></font></h3><a id="user-content-sources" class="anchor" aria-label="永久链接：来源" href="#sources"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">YouTube</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SoundCloud</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">乐队夏令营</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vimeo</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Twitch 直播</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本地文件</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HTTP URL</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">格式</font></font></h3><a id="user-content-formats" class="anchor" aria-label="永久链接：格式" href="#formats"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MP3</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">弹性计算</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">音频</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Matroska/WebM（AAC、Opus 或 Vorbis 编解码器）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MP4/M4A（AAC 编解码器）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OGG 流（Opus、Vorbis 和 FLAC 编解码器）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AAC 流</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">流媒体播放列表（M3U 和 PLS）</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">例子</font></font></h2><a id="user-content-example" class="anchor" aria-label="永久链接：示例" href="#example"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><animated-image data-catalyst=""><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/fa206b986c1a41e339d8d4ec7b4a0675e52507eccc740e94194dfb48f9dab38d/68747470733a2f2f692e696d6775722e636f6d2f6b5674544b76532e676966" data-target="animated-image.originalLink"><img src="https://camo.githubusercontent.com/fa206b986c1a41e339d8d4ec7b4a0675e52507eccc740e94194dfb48f9dab38d/68747470733a2f2f692e696d6775722e636f6d2f6b5674544b76532e676966" alt="正在加载示例..." data-canonical-src="https://i.imgur.com/kVtTKvS.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
+      <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
+        <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://camo.githubusercontent.com/fa206b986c1a41e339d8d4ec7b4a0675e52507eccc740e94194dfb48f9dab38d/68747470733a2f2f692e696d6775722e636f6d2f6b5674544b76532e676966" target="_blank">
+          
+        <span data-target="animated-image.imageContainer">
+            <img data-target="animated-image.replacedImage" alt="正在加载示例..." class="AnimatedImagePlayer-animatedImage" src="https://camo.githubusercontent.com/fa206b986c1a41e339d8d4ec7b4a0675e52507eccc740e94194dfb48f9dab38d/68747470733a2f2f692e696d6775722e636f6d2f6b5674544b76532e676966" style="display: block; opacity: 1;">
+          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="814" height="853"></canvas></span></a>
+        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="播放加载示例..." hidden=""></button>
+        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
+          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="播放加载示例...">
+            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
+            </path></svg>
+            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
+              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
+            </svg>
+          </button>
+          <a data-target="animated-image.openButton" aria-label="在新窗口中打开加载示例..." class="AnimatedImagePlayer-button" href="https://camo.githubusercontent.com/fa206b986c1a41e339d8d4ec7b4a0675e52507eccc740e94194dfb48f9dab38d/68747470733a2f2f692e696d6775722e636f6d2f6b5674544b76532e676966" target="_blank">
+            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
+            </svg>
+          </a>
+        </span>
+      </span></animated-image></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">设置</font></font></h2><a id="user-content-setup" class="anchor" aria-label="固定链接：设置" href="#setup"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请参阅</font></font><a href="https://jmusicbot.com/setup" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">设置页面</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">来自己运行此机器人！</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">问题/建议/错误报告</font></font></h2><a id="user-content-questionssuggestionsbug-reports" class="anchor" aria-label="永久链接：问题/建议/错误报告" href="#questionssuggestionsbug-reports"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请</font><font style="vertical-align: inherit;">在建议功能之前阅读</font></font><a href="https://github.com/jagrosh/MusicBot/issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">问题列表</font></font></a><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。如果您有疑问、需要故障排除帮助或想要集思广益提出新功能，请开始讨论</font></font><a href="https://github.com/jagrosh/MusicBot/discussions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想建议功能或报告可重现的错误，请在此存储库上打开</font></font><a href="https://github.com/jagrosh/MusicBot/issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">问题</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。如果您喜欢这个机器人，请务必为实现此功能的库添加一颗星：</font></font><a href="https://github.com/DV8FromTheWorld/JDA"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JDA</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="https://github.com/sedmelluq/lavaplayer"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">lavaplayer</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">！</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">編輯</font></font></h2><a id="user-content-editing" class="anchor" aria-label="永久链接：编辑" href="#editing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于缺乏经验的程序员来说，编辑此机器人（以及此处的源代码）可能并不容易。公开源代码的主要目的是展示库的功能，让其他人了解机器人的工作原理，并让那些熟悉 Java、JDA 和 Discord 机器人开发的人员做出贡献。编辑和编译它需要许多要求和依赖项，并且不会为希望自行进行更改的人提供支持。相反，请考虑提出功能请求（请参阅上一节）。如果您选择进行编辑，请按照 Apache 2.0 许可证进行。</font></font></p>
+</article></div>
